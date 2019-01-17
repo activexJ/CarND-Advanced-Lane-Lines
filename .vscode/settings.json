@@ -1,4 +1,4 @@
 {
     "python.pythonPath": "C:\\Users\\aruld\\AppData\\Local\\conda\\conda\\envs\\kpit\\python.exe",
-    "python.linting.enabled": false
+    "python.linting.pylintEnabled": false
 }

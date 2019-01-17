@@ -59,7 +59,9 @@ def findLane(image, isNew,image_name = None, writeToFile = False):
     
     #7. Applied perspective transform to the image
     warped_img, M = pt.warp_image(combined_binary)
-    
+    # test = fl.fit_polynomial(warped_img)
+    # plt.imshow(test)
+    # plt.show()
     '''
     Identinfing the lane points in the image. If it is a new image then use histogram to find the left fit and right fit
     Else use the previously identified pointts to calculate the next points
@@ -110,15 +112,17 @@ def process_test_images():
 
     
 if __name__ == '__main__':
+    # image = cv2.imread('./test_images/test6.jpg')
     # result = findLane(image, isNew)
-
+    # plt.imshow(result)
+    # plt.show()
     #generate output images
-    process_test_images()
+    # process_test_images()
 
-    # from moviepy.editor import VideoFileClip
+    from moviepy.editor import VideoFileClip
     
-    # white_output = 'output_video/harder_challenge_video.mp4'
-    # clip1 = VideoFileClip("harder_challenge_video.mp4")
+    white_output = 'output_video/project_video1.mp4'
+    clip1 = VideoFileClip("project_video.mp4")
 
-    # white_clip = clip1.fl_image(process_image)
-    # white_clip.write_videofile(white_output, audio=False)
+    white_clip = clip1.fl_image(process_image)
+    white_clip.write_videofile(white_output, audio=False)

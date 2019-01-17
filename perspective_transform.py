@@ -7,9 +7,9 @@ def warp_image(binary_img):
     image = np.copy(binary_img)
     
     # Select point by viewing on image
-    top_left = [575, 475]
-    top_right = [725, 475]
-    bottom_left = [275, 675]
+    top_left = [575, 480]
+    top_right = [725, 480]
+    bottom_left = [280, 675]
     bottom_right = [1050, 675]
 
     src = np.float32([top_left, bottom_left, top_right, bottom_right])
